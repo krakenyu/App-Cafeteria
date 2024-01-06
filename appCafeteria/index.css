@@ -1,0 +1,18 @@
+body{background-color: #696969;}
+div{
+    background-color: rgb(92, 91, 90);
+    
+        position: fixed; /* posición fija en la ventana de tu navegador */  
+        top: 10px; /* distancia en px desde la parte superior */  
+        right: 10px; /* distancia en px desde la parte derecha */ 
+      }
+
+
+h1{
+    width: 400px;
+    height: 80px;
+    margin: auto;
+    font-weight: bolder;
+    font-size: 50px;
+    background-color: rgb(231, 62, 62);
+}

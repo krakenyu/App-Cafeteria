@@ -1,0 +1,9 @@
+body{background-color: #696969;}
+
+nav{
+    background-color: rgb(92, 91, 90);
+    
+        position: fixed; /* posición fija en la ventana de tu navegador */  
+        top: 10px; /* distancia en px desde la parte superior */  
+        right: 10px; /* distancia en px desde la parte derecha */ 
+      }
