@@ -32,16 +32,6 @@ abstract class GranosModel{
             this.writeDB()
         }
     }
-    static async deleteGrano(tostador : string){
-        for(let i =0 ; i< dbG.length; i++){
-            if(dbG[i].Tostador !== tostador){
-                return "No existe un tostador con ese nombre"
-            }
-            const index = dbG.indexOf(dbG[i])
-            dbG.splice(1, index)
-            return "Tostador eliminado correctamente"
-        }
-    }
 }
 
 export default GranosModel

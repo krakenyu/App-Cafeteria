@@ -17,11 +17,6 @@ abstract class GranosController {
         const found = await GranosModel.getByTostador(tostador)
         res.status(302).json({message: "Tostador encontrado" ,found})
     }
-    static async deleteG (req: Request, res: Response){
-        const {nombreDeTostador} = req.params;
-        const found = await GranosModel.deleteGrano(nombreDeTostador);
-        res.status(410).json({message: "Tostador eliminado correctamente",found})
-    }
 
 }
 

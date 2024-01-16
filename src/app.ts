@@ -1,15 +1,17 @@
 import  express,{json}  from "express";
 import helmet from 'helmet'
 import cafeteriaRouter from "./routes/routerCafeterias";
+//import granosRouter from "./routes/routerGranos";
 
 const app = express()
 
 app.use(json());
 app.use(helmet());
 
-app.use('v1/api', cafeteriaRouter)
+app.use('/api/cafeterias', cafeteriaRouter)
+/* 
+app.use('v1/api/granos', granosRouter) */
 
-app.all('*', )
+/* app.all('*', ) */
 
-
-
+export default app

@@ -2,6 +2,7 @@ import db from '../databases/cafeterias.json';
 import { writeFile } from 'jsonfile'
 
 const dbCafeterias = db.Cafeterias
+ // hacer requerimientos con zod
 
 abstract class CafeteriasModel{
 
@@ -12,49 +13,36 @@ abstract class CafeteriasModel{
 		return db;
 	}
 
-        static async newCafeteria(obj: any) {
-        const {nombre, zonaYdireccion, descripcion} = obj;
-            
-        // hacer requerimientos con zod
-        for(let i = 0; i< dbCafeterias.length; i ++){
-            if(dbCafeterias[i].Nombre == nombre) return "Cafeteria already exist"
-        }
-            dbCafeterias.push({
-                Nombre: nombre,
-                Descripcion: descripcion,
-                Ubicacion: zonaYdireccion
-            });
-            await this.writeDB()
-        }
-
         static async getByName(name:string) {
 
-            for(let i = 0; i< dbCafeterias.length; i ++){
-                if(dbCafeterias[i].Nombre == name) return dbCafeterias[i]
-            }
+        for(let i = 0; i < dbCafeterias.length; i ++){
+            if(dbCafeterias[i].nombre.toLowerCase() === name.toLowerCase()) return dbCafeterias[i]
+        }
 
-            }
-
-        static async deleteCafeteria(nombre:string) {
-                const indice = dbCafeterias.findIndex(objeto => objeto.Nombre.toLowerCase() === nombre.toLowerCase() );
-              
-                if (indice !== -1) {
-                    dbCafeterias.splice(indice, 1);
-                    console.log(`'${nombre}' eliminado correctamente .`);
-                  await this.writeDB()
-                } else {
-                  console.log(`Objeto con nombre '${nombre}' no encontrado.`);
-                }
-              }
+    }
+        static async newCafeteria(obj : any) {
+        const {nombre, ubicacion, descripcion} = obj;
+        //console.log({nombre, ubicacion, descripcion})
+            
+        const find = await this.getByName(nombre)
+        console.log("buscando cafeteria con el mismo nombre",nombre);
+        
+        if(find) return "Cafeteria already exist"
+            dbCafeterias.push(obj);
+            await this.writeDB()
+            
+            console.log("cafeteria creada")
+        return `Cafeteria ${nombre} creada correctamente`
+    }
         
 }
  // Llamada a la función deleteCafeteria
-/*  async function eliminarCafeteria() {
-     const result = await CafeteriasModel.deleteCafeteria(`Kaffein`);
+ /*   async function paraPruebas() {
+     const result = await CafeteriasModel.newCafeteria("Raiz","Buen viaje 822", "nueva cafeteria de mano de diego lobo");
 
-} */
-
-export {CafeteriasModel} 
+} 
+paraPruebas()  */ 
+export default CafeteriasModel
 /* async async UpdateCafeteria(nombre: string) {
     
     const encontrarCafeteria = dbCafeterias.find((cafe: any) => cafe.nombre == nombre)

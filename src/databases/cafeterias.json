@@ -1,18 +1,29 @@
 {
-    "Cafeterias":[   
-    {
-        "Nombre": "Pier's",
-        "Descripcion": "Cafetería de Especialidad ubicada en Zona Oeste, pasando un largo pasillo se encuentra la entrada y al avanzar te daras cuenta de que es mucho mas grande de lo que aparenta, cuentan con un patio con huerta y con una planta alta con terraza",
-        "Ubicacion": "Zona Oeste,Buen viaje 822, Moron"
-    },
-    {
-        "Nombre": "Norte",
-        "Descripcion": "Cafetería de Especialidad ubicada en Zona Oeste, pasando un largo pasillo se encuentra la entrada y al avanzar te daras cuenta de que es mucho mas grande de lo que aparenta, cuentan con un patio con huerta y con una planta alta con terraza",
-        "Ubicacion": "Zona Oeste,a, Moron"
-    },
-    {
-        "Nombre": "Kaffein",
-        "Descripcion": "Cafetería de Especialidad ubicada en Zona Oeste, pasando un largo pasillo se encuentra la entrada y al avanzar te daras cuenta de que es mucho mas grande de lo que aparenta, cuentan con un patio con huerta y con una planta alta con terraza",
-        "Ubicacion": "Zona Oeste,d, Moron"
-    }
-]}
+    "Cafeterias": [
+        {
+            "nombre": "Pier's",
+            "descripcion": "Cafetería de Especialidad ubicada en Zona Oeste, pasando un largo pasillo se encuentra la entrada y al avanzar te daras cuenta de que es mucho mas grande de lo que aparenta, cuentan con un patio con huerta y con una planta alta con terraza",
+            "ubicacion": "Zona Oeste,Buen viaje 822, Moron"
+        },
+        {
+            "nombre": "Norte",
+            "descripcion": "Cafetería de Especialidad ubicada en Zona Oeste, pasando un largo pasillo se encuentra la entrada y al avanzar te daras cuenta de que es mucho mas grande de lo que aparenta, cuentan con un patio con huerta y con una planta alta con terraza",
+            "ubicacion": "Zona Oeste,a, Moron"
+        },
+        {
+            "nombre": "Kaffein",
+            "descripcion": "Cafetería de Especialidad ubicada en Zona Oeste, pasando un largo pasillo se encuentra la entrada y al avanzar te daras cuenta de que es mucho mas grande de lo que aparenta, cuentan con un patio con huerta y con una planta alta con terraza",
+            "ubicacion": "Zona Oeste,d, Moron"
+        },
+        {
+            "nombre": "Raiz",
+            "descripcion": "nueva cafeteria de mano de diego lobo",
+            "ubicacion": "Buen viaje 822"
+        },
+        {
+            "nombre": "Toki",
+            "descripcion": "Pequeña cafeteria con tematica japonesa en retiro",
+            "ubicacion": "av corrientes 1836"
+        }
+    ]
+}
